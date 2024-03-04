@@ -1,7 +1,7 @@
 package com.yp.nowoj.model.vo;
 
 import cn.hutool.json.JSONUtil;
-import com.yp.nowoj.model.dto.questionsubmit.JudgeInfo;
+import com.yp.nowoj.judge.codesandbox.model.JudgeInfo;
 import com.yp.nowoj.model.entity.QuestionSubmit;
 import lombok.Data;
 import org.springframework.beans.BeanUtils;

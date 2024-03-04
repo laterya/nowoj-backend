@@ -3,7 +3,7 @@ package com.yp.nowoj.judge.strategy;
 import cn.hutool.json.JSONUtil;
 import com.yp.nowoj.model.dto.question.JudgeCase;
 import com.yp.nowoj.model.dto.question.JudgeConfig;
-import com.yp.nowoj.model.dto.questionsubmit.JudgeInfo;
+import com.yp.nowoj.judge.codesandbox.model.JudgeInfo;
 import com.yp.nowoj.model.entity.Question;
 import com.yp.nowoj.model.enums.JudgeInfoMessageEnum;
 

@@ -3,7 +3,7 @@ package com.yp.nowoj.judge.codesandbox.impl;
 import com.yp.nowoj.judge.codesandbox.CodeSandbox;
 import com.yp.nowoj.judge.codesandbox.model.ExecuteCodeRequest;
 import com.yp.nowoj.judge.codesandbox.model.ExecuteCodeResponse;
-import com.yp.nowoj.model.dto.questionsubmit.JudgeInfo;
+import com.yp.nowoj.judge.codesandbox.model.JudgeInfo;
 import com.yp.nowoj.model.enums.JudgeInfoMessageEnum;
 import com.yp.nowoj.model.enums.QuestionSubmitStatusEnum;
 

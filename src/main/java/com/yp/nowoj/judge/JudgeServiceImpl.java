@@ -10,7 +10,7 @@ import com.yp.nowoj.judge.codesandbox.model.ExecuteCodeRequest;
 import com.yp.nowoj.judge.codesandbox.model.ExecuteCodeResponse;
 import com.yp.nowoj.judge.strategy.JudgeContext;
 import com.yp.nowoj.model.dto.question.JudgeCase;
-import com.yp.nowoj.model.dto.questionsubmit.JudgeInfo;
+import com.yp.nowoj.judge.codesandbox.model.JudgeInfo;
 import com.yp.nowoj.model.entity.Question;
 import com.yp.nowoj.model.entity.QuestionSubmit;
 import com.yp.nowoj.model.enums.QuestionSubmitStatusEnum;

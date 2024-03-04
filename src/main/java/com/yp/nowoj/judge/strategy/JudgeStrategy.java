@@ -1,6 +1,6 @@
 package com.yp.nowoj.judge.strategy;
 
-import com.yp.nowoj.model.dto.questionsubmit.JudgeInfo;
+import com.yp.nowoj.judge.codesandbox.model.JudgeInfo;
 
 /**
  * @ClassName: JudgeStrategy

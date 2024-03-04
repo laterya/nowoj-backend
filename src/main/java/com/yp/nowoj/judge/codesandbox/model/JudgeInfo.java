@@ -1,4 +1,4 @@
-package com.yp.nowoj.model.dto.questionsubmit;
+package com.yp.nowoj.judge.codesandbox.model;
 
 import lombok.Data;
 

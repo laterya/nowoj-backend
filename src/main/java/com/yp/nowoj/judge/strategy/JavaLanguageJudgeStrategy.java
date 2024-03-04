@@ -1,13 +1,14 @@
 package com.yp.nowoj.judge.strategy;
 
 import cn.hutool.json.JSONUtil;
+import com.yp.nowoj.judge.codesandbox.model.JudgeInfo;
 import com.yp.nowoj.model.dto.question.JudgeCase;
 import com.yp.nowoj.model.dto.question.JudgeConfig;
-import com.yp.nowoj.model.dto.questionsubmit.JudgeInfo;
 import com.yp.nowoj.model.entity.Question;
 import com.yp.nowoj.model.enums.JudgeInfoMessageEnum;
 
 import java.util.List;
+import java.util.Optional;
 
 /**
  * Java 程序的判题策略
@@ -16,13 +17,14 @@ public class JavaLanguageJudgeStrategy implements JudgeStrategy {
 
     /**
      * 执行判题
+     *
      * @param judgeContext
      * @return
      */
     @Override
     public JudgeInfo doJudge(JudgeContext judgeContext) {
         JudgeInfo judgeInfo = judgeContext.getJudgeInfo();
-        Long memory = judgeInfo.getMemory();
+        Long memory = Optional.ofNullable(judgeInfo.getMemory()).orElse(0l);
         Long time = judgeInfo.getTime();
         List<String> inputList = judgeContext.getInputList();
         List<String> outputList = judgeContext.getOutputList();
@@ -41,6 +43,10 @@ public class JavaLanguageJudgeStrategy implements JudgeStrategy {
         // 依次判断每一项输出和预期输出是否相等
         for (int i = 0; i < judgeCaseList.size(); i++) {
             JudgeCase judgeCase = judgeCaseList.get(i);
+            String output = judgeCase.getOutput();
+            String realOUtput = outputList.get(0);
+            System.out.println("预期结果：" + output);
+            System.out.println("实际结果：" + realOUtput);
             if (!judgeCase.getOutput().equals(outputList.get(i))) {
                 judgeInfoMessageEnum = JudgeInfoMessageEnum.WRONG_ANSWER;
                 judgeInfoResponse.setMessage(judgeInfoMessageEnum.getValue());
